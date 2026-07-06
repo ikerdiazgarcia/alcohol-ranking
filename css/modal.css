@@ -1,0 +1,133 @@
+.modal{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#17181d;
+
+    z-index:1000;
+
+}
+
+.hidden{
+
+    display:none;
+
+}
+
+.modal-content{
+
+    width:min(420px,90%);
+
+    background:var(--card);
+
+    border-radius:var(--radius);
+
+    padding:24px;
+
+}
+
+.drink-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin:18px 0;
+
+}
+
+.drink-row button{
+
+    width:36px;
+
+    height:36px;
+
+    border:none;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:1.3rem;
+
+    font-weight:600;
+
+    line-height:1;
+
+    padding:0;
+
+}
+
+.drink-row span{
+
+    margin:0 8px;
+
+}
+
+.modal-content button{
+
+    width:100%;
+
+    padding:14px;
+
+    margin-top:14px;
+
+    border:none;
+
+    border-radius:14px;
+
+}
+
+#saveButton{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+#closeModal{
+
+    background:#444;
+
+    color:white;
+
+}
+
+.counter{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+}
+
+.counter span{
+
+    width:30px;
+
+    text-align:center;
+
+    font-size:1.2rem;
+
+    font-weight:bold;
+
+}
