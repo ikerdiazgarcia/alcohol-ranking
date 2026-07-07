@@ -16,9 +16,14 @@ export function renderRanking(usuarios, tipo, titulo) {
 
         <div class="ranking-row">
 
-            <span>
-
+            <span class="ranking-user"> 
+            
                 ${getMedalla(index)}
+
+                <img
+                    class="ranking-avatar"
+                    src="${usuario.foto}">
+
                 ${usuario.nombre}
 
             </span>

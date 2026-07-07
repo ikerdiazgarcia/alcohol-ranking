@@ -147,3 +147,25 @@
     background:rgba(255,255,255,.02);
 
 }
+
+.ranking-user{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+.ranking-avatar{
+
+    width:30px;
+
+    height:34px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+}
