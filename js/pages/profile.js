@@ -13,6 +13,8 @@ import {
   getCambios
 } from "../components/modal.js";
 import { showToast } from "../utils/toast.js";
+import { addHistory } from "../services/historyService.js";
+import { showStats } from "../router.js";
 
 export function renderProfile(usuario) {
 
@@ -139,6 +141,20 @@ export function renderProfile(usuario) {
 
         </button>
 
+        <button
+            id="statsButton"
+            class="nav-button">
+
+            <span class="material-symbols-rounded">
+
+                bar_chart
+
+            </span>
+
+            Estadísticas
+
+        </button>
+
         <button class="nav-button active">
 
             <span class="material-symbols-rounded">
@@ -176,6 +192,11 @@ export function initProfile() {
     document
         .getElementById("homeButton")
         .addEventListener("click", showHome);
+
+    document
+        .getElementById("statsButton")
+        .addEventListener("click", showStats);
+ 
 
     document
         .getElementById("addButton")
@@ -234,6 +255,8 @@ async function guardarCambios() {
         copas: usuario.copas + cambios.copas
 
     });
+
+    await addHistory(usuario.uid, cambios);
 
     showToast("Puntuación actualizada");
 

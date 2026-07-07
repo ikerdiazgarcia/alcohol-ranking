@@ -7,6 +7,7 @@ import {
     renderRankingSelector,
     initRankingSelector
 } from "../components/rankingSelector.js";
+import { showStats } from "../router.js";
 
 export function renderHome(usuario) {
 
@@ -71,6 +72,20 @@ export function renderHome(usuario) {
         </button>
 
         <button
+            id="statsButton"
+            class="nav-button">
+
+            <span class="material-symbols-rounded">
+
+                bar_chart
+
+            </span>
+
+            Estadísticas
+
+        </button>
+
+        <button
             id="profileButton"
             class="nav-button">
 
@@ -83,6 +98,8 @@ export function renderHome(usuario) {
             Perfil
 
         </button>
+
+
 
     </nav>
 
@@ -97,6 +114,10 @@ export function initHome(){
     document
         .getElementById("profileButton")
         .addEventListener("click", showProfile);
+
+    document
+        .getElementById("statsButton")
+        .addEventListener("click", showStats);
     
     initRankingSelector();
 
